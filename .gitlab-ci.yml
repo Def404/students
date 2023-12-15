@@ -18,7 +18,7 @@ variables:
   # Kubernetes executor connects services to the job container
   # DOCKER_HOST: tcp://localhost:2375
   #
-  DOCKER_HOST: tcp://localhost:2375
+  DOCKER_HOST: tcp://192.168.1.50:2375
   #
   # This instructs Docker not to start over TLS.
   DOCKER_TLS_CERTDIR: ""
