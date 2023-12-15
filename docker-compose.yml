@@ -2,16 +2,14 @@
   postgres:
     container_name: postgres_container
     image: postgres
-    environment:
-      POSTGRES_USER: ${POSTGRES_USER:-postgres}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-def555}
-      PGDATA: /data/postgres
     volumes:
       - postgres:/data/postgres
       - ~/students/Database:/data/database
     ports:
       - "5433:5432"
     restart: unless-stopped
+    env_file:
+      - .env
 
 volumes:
   postgres:
