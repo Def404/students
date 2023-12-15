@@ -1,8 +1,9 @@
-image : docker
-
-stages:
-  - test-run
-  - release
+default:
+  image: docker
+  services:
+    - docker
+  before_script:
+    - docker info
 
 test-run:
   stage: test-run
