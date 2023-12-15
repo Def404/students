@@ -12,7 +12,8 @@
     ports:
       - "5433:5432"
     restart: unless-stopped
-    command: bash -c "psql -U postgres -d postgres -f /data/database/create_database.sql"
+    command: > 
+      sh -c "psql -U postgres -d postgres -f /data/database/create_database.sql"
 
 volumes:
   postgres:
