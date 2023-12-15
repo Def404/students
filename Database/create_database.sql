@@ -1,7 +1,4 @@
-﻿CREATE DATABASE university
-    ENCODING 'UTF-8'
-    LC_COLLATE 'ru_RU.UTF-8'
-    LC_CTYPE 'ru_RU.UTF-8';
+﻿CREATE DATABASE university;
 
 CREATE TABLE students (
     id serial PRIMARY KEY,
@@ -11,6 +8,6 @@ CREATE TABLE students (
 );
 
 COPY students(id, student_name, study_group, date_of_birth)
-FROM 'data/database/students.csv'
+FROM '/data/database/students.csv'
 DELIMITER ','
 CSV HEADER;
