@@ -6,7 +6,7 @@ stages:
 test-run:
   stage: test-run
   script:
-    - docker info
+    - echo "test"
   artifacts:
     paths:
       - test/*.jar
