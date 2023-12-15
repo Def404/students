@@ -12,9 +12,6 @@
     ports:
       - "5433:5432"
     restart: unless-stopped
-    command: > 
-      sh -c "chmod +x /data/database/init_database.sh
-      ./data/database/init_database.sh"
 
 volumes:
   postgres:
