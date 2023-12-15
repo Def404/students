@@ -5,6 +5,9 @@ default:
   before_script:
     - docker info
 
+stages:
+  - test-run
+
 test-run:
   stage: test-run
   script:
