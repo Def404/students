@@ -1,0 +1,13 @@
+﻿image: docker
+
+stages:
+  - test
+
+
+test:
+  stage: test
+  script: 
+    - docker compose up
+  artifacts:
+    paths:
+      - test/*.jar
