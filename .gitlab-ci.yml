@@ -1,12 +1,12 @@
 ﻿image: docker
 
 stages:
-  - test
+  - test-run
 
-
-test:
-  stage: test
-  script: 
+test-run:
+  stage: test-run
+  script:
+    - docker compose build
     - docker compose up
   artifacts:
     paths:
