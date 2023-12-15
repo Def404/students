@@ -10,9 +10,6 @@ stages:
 
 test-run:
   stage: test-run
-  script:
-    - docker compose build
-    - docker compose up
   artifacts:
     paths:
       - test/*.jar
