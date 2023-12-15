@@ -9,11 +9,10 @@
     volumes:
       - postgres:/data/postgres
       - ~/students/Database:/data/database
+      - ~/students/Database/create_database.sql:/docker-entrypoint-initdb.d/create_tables.sql
     ports:
       - "5433:5432"
     restart: unless-stopped
-    command: > 
-      sh -c "psql -U postgres -d postgres -f /data/database/create_database.sql"
 
 volumes:
   postgres:
