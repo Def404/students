@@ -1,5 +1,5 @@
 default:
-  image: docker
+  image : docker
   services:
     - docker
   before_script:
@@ -13,4 +13,3 @@ test-run:
   artifacts:
     paths:
       - test/*.jar
-
