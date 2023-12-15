@@ -1,12 +1,15 @@
-﻿image: docker
+image : docker
 
 stages:
   - test-run
+  - release
 
 test-run:
   stage: test-run
   script:
-    - echo "test"
+    - docker compose build
+    - docker compose up
   artifacts:
     paths:
       - test/*.jar
+
