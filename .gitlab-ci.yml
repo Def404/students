@@ -10,6 +10,8 @@ stages:
 
 test-run:
   stage: test-run
+  script:
+    - echo "test"
   artifacts:
     paths:
       - test/*.jar
