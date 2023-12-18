@@ -5,12 +5,12 @@
     volumes:
       - postgres:/data/postgres
       - ~/students/Database:/data/database
-      - ~/students/Database/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - $initdb:/docker-entrypoint-initdb.d/init.sql
     ports:
       - "5433:5432"
     restart: unless-stopped
     env_file:
-      - .env
+      - $env
     networks: 
       net:
         ipv4_address: 192.168.150.2
