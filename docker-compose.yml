@@ -10,7 +10,7 @@
     restart: unless-stopped
     env_file:
       - .env
-    command: bundle exec echo "test"
+    command: exec echo "test"
     networks: 
       net:
         ipv4_address: 192.168.150.2
