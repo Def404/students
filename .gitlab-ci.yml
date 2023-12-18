@@ -11,7 +11,6 @@ build:
     DOCKER_TLS_CERTDIR: "/certs"
   script:
     - docker compose build
-    - docker compose run -d 
       
 run:
   stage: run
@@ -21,5 +20,4 @@ run:
   variables:
     DOCKER_TLS_CERTDIR: "/certs"
   script:
-    - docker compose build
     - docker compose run -d 
