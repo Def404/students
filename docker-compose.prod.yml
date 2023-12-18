@@ -10,7 +10,7 @@
       - "5433:5432"
     restart: unless-stopped
     env_file:
-      - $env
+      - .env
     networks:
       net:
         ipv4_address: 192.168.150.2
