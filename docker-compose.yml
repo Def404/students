@@ -21,6 +21,9 @@
       context: ./GetStudent
       dockerfile: Dockerfile
     restart: on-failure
+    networks:
+      net:
+        ipv4_address: 192.168.150.3
 
 
 volumes:
