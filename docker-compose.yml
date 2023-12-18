@@ -17,6 +17,7 @@
     build: 
       context: ./GetStudent
       dockerfile: Dockerfile
+    restart: on-failure
 
 
 volumes:
