@@ -7,8 +7,6 @@ build:
     DOCKER_TLS_CERTDIR: "/certs"
   script:
     - docker compose build
-  only: 
-    - dev
   artifacts:
     paths:
       - build/*.jar
