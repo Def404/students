@@ -10,8 +10,8 @@
     restart: unless-stopped
     env_file:
       - .env
-    command:
-      - echo "text"
+    command: sh 
+      > "echo "text""
     networks: 
       net:
         ipv4_address: 192.168.150.2
