@@ -10,7 +10,6 @@
     restart: unless-stopped
     env_file:
       - .env
-    command: bash -c "pwd"
     networks: 
       net:
         ipv4_address: 192.168.150.2
