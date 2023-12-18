@@ -10,6 +10,9 @@
     restart: unless-stopped
     env_file:
       - .env
+    networks: 
+      net:
+        - ipv4_address: 192.168.150.2
   
   console_app:
     container_name: console_app
@@ -22,3 +25,11 @@
 
 volumes:
   postgres:
+    
+networks:
+  net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 192.168.150.0/24
+          gateway: 192.168.150.1

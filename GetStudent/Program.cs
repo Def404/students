@@ -7,7 +7,7 @@ internal class Program
 	public static void Main(string[] args)
 	{
 		var connectionString =
-			"Server=192.168.1.50;Port=5433;Database=university;User Id=postgres;Password=def555;Pooling=true;";
+			"Server=192.168.150.2;Port=5432;Database=university;User Id=postgres;Password=def555;Pooling=true;";
 
 		List<Student> students = new List<Student>();
 		
