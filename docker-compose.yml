@@ -12,7 +12,7 @@
       - .env
     networks: 
       net:
-        - ipv4_address: 192.168.150.2
+        ipv4_address: 192.168.150.2
   
   console_app:
     container_name: console_app
