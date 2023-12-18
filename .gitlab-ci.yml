@@ -1,12 +1,8 @@
-﻿image: docker
-
-stages:
-  - test-run
-
-test-run:
-  stage: test-run
+test_run:
+  image: docker:24.0.7-cli
+  services:
+    - docker:24.0.7-dind
+  variables:
+    DOCKER_TLS_CERTDIR: "/certs"
   script:
-    - echo "test"
-  artifacts:
-    paths:
-      - test/*.jar
+    - docker compose up
